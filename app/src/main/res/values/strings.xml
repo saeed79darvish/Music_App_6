@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Music_App</string>
+    <string name="category_Artists">Artists</string>
+    <string name="category_PlayList">PlayList</string>
+    <string name="name_artist">Shakira</string>
+
+
+    <string name="category_Albums">Albums</string>
+    <string name="app_name_PlayList">PlayList</string>
+    <string name="app_name_Artists">Artists</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
