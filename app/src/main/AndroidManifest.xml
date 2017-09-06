@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
- Copyright (C) 2016 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.saeed.music_app">
 
@@ -29,12 +15,15 @@
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="example.com" />
             </intent-filter>
+
             <meta-data
                 android:name="default-url"
                 android:value="https://www.example.com/index.html" />
@@ -42,9 +31,7 @@
         <activity
             android:name=".AlbumsActivity"
             android:label="@string/category_Albums" />
-        <activity
-            android:name=".ArtistActivity"
-            android:label="@string/app_name_Artists" />
+
         <activity
             android:name=".PlayListActivity"
             android:label="@string/category_PlayList"></activity>

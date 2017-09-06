@@ -1,15 +1,12 @@
 package com.example.saeed.music_app;
 
 import android.content.Intent;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
+
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final TextView playlist = (TextView) findViewById(R.id.PlayList);
-       playlist.setOnClickListener(new View.OnClickListener() {
+        playlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent playlistintent = new Intent(MainActivity.this, PlayListActivity.class);
@@ -35,11 +32,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(albumsintent);
             }
         });
-
-
-
-
-
 
     }
 

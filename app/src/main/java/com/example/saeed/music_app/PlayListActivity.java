@@ -27,7 +27,6 @@ public class PlayListActivity extends AppCompatActivity {
                         mediaPlayer.start();
                     } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                         releaseMediaPlayer();
-                        // Lower the volume, keep playing
                     }
                 }
             };
@@ -38,8 +37,6 @@ public class PlayListActivity extends AppCompatActivity {
             releaseMediaPlayer();
         }
     };
-
-
 
 
     @Override
@@ -65,14 +62,9 @@ public class PlayListActivity extends AppCompatActivity {
         words.add(new word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play, R.raw.hello));
         words.add(new word(R.drawable.shakira, "Shakira", R.drawable.ic_play, R.raw.shakira_waka));
 
-
         wordAdapter Adapter = new wordAdapter(this, words);
-
-
         ListView listView = (ListView) findViewById(R.id.PlayList);
-
         listView.setAdapter(Adapter);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -80,26 +72,17 @@ public class PlayListActivity extends AppCompatActivity {
                 word word = words.get(position);
                 releaseMediaPlayer();
 
-
                 int result = audioManager.requestAudioFocus(mOnAudioFocusChangeListener,
-                        // Use the music stream.
                         AudioManager.STREAM_MUSIC,
-                        // Request permanent focus.
                         AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    // Start playback
-
-
                     mediaPlayer = MediaPlayer.create(PlayListActivity.this, word.getAudioResourceId());
                     mediaPlayer.start();
 
                     mediaPlayer.setOnCompletionListener(mCompletionListener);
                 }
             }
-
         });
-
 
     }
 
@@ -118,10 +101,7 @@ public class PlayListActivity extends AppCompatActivity {
             audioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
 
         }
-
-
     }
-
 
 }
 
