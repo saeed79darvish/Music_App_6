@@ -3,9 +3,11 @@
     <string name="app_name">Music_App</string>
     <string name="category_PlayList">PlayList</string>
 
+    <string name="category_welcom">Welcom to Music_App this App is a best place for enjoing to music, my name is Saeed Darvish and I disined this app ,so Welcom to my music app!</string>
+    <string name="category_paypal">With 10$ you can add new songs to your App!</string>
+
 
     <string name="category_Albums">Albums</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

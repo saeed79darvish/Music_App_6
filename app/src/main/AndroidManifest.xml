@@ -11,6 +11,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
@@ -31,12 +32,10 @@
         <activity
             android:name=".AlbumsActivity"
             android:label="@string/category_Albums" />
-
         <activity
             android:name=".PlayListActivity"
-            android:label="@string/category_PlayList"></activity>
-
-
+            android:label="@string/category_PlayList" />
+        <activity android:name=".MusicDetailsActivity"></activity>
     </application>
 
 </manifest>

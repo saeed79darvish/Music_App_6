@@ -1,10 +1,12 @@
 package com.example.saeed.music_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -13,6 +15,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class PlayListActivity extends AppCompatActivity {
+
+    Toolbar toolbar;
     private MediaPlayer mediaPlayer;
     private AudioManager audioManager;
 
@@ -43,6 +47,8 @@ public class PlayListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_list);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
@@ -62,15 +68,19 @@ public class PlayListActivity extends AppCompatActivity {
         words.add(new word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play, R.raw.hello));
         words.add(new word(R.drawable.shakira, "Shakira", R.drawable.ic_play, R.raw.shakira_waka));
 
-        wordAdapter Adapter = new wordAdapter(this, words);
-        ListView listView = (ListView) findViewById(R.id.PlayList);
+        wordAdapter Adapter = new wordAdapter(PlayListActivity.this, words);
+        final ListView listView = (ListView) findViewById(R.id.PlayList);
         listView.setAdapter(Adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent intent = new Intent(PlayListActivity.this, MusicDetailsActivity.class);
+                intent.putExtra("ArtistName", listView.getItemAtPosition(position).toString());
+                startActivity(intent);
 
                 word word = words.get(position);
                 releaseMediaPlayer();
+
 
                 int result = audioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC,
@@ -89,9 +99,14 @@ public class PlayListActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        releaseMediaPlayer();
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        releaseMediaPlayer();
+    }
 
     private void releaseMediaPlayer() {
         if (mediaPlayer != null) {
@@ -102,6 +117,5 @@ public class PlayListActivity extends AppCompatActivity {
 
         }
     }
-
 }
 

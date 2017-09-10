@@ -38,4 +38,8 @@ public class word {
         return mAudioResourceId;
     }
 
+    @Override
+    public String toString() {
+        return mVersionName;
+    }
 }
