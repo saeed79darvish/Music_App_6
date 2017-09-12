@@ -15,13 +15,15 @@
 -->
 <resources>
 
-    <color name="primary_color">#4A312A</color>
+    <color name="primary_color">#303bcf</color>
 
 
-    <color name="primary_dark_color">#2F1D1A</color>
+    <color name="primary_dark_color">#130cd7</color>
 
 
     <color name="category_playlist">#e43424</color>
+
+    <color name="category_main_activity">#02842b</color>
 
     <color name="category_welcom">#f4f4f1</color>
 

@@ -1,11 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Albums_Activity"
     android:layout_width="match_parent"
-    android:numColumns="2"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.saeed.music_app.AlbumsActivity">
 
-</GridView>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        app:titleTextColor="#fcfbfb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/main_activity_Albums"
+            style="@style/CategoryStyle"
+            android:background="@color/category_main_activity"
+            android:onClick="main"
+            android:text="@string/category_main" />
+
+        <TextView
+            android:id="@+id/PlayList_Albums"
+            style="@style/CategoryStyle"
+            android:background="@color/category_playlist"
+            android:onClick="playlist"
+            android:text="@string/category_PlayList" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/category_Albums"
+            android:textColor="#fcfafa"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/Welcom"
+            style="@style/CategoryStyle_welcom"
+            android:layout_marginTop="10dp"
+            android:background="@color/category_welcom"
+            android:text="@string/category_albums_details" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/Albums_Activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        tools:context="com.example.saeed.music_app.AlbumsActivity">
+
+    </GridView>
+
+</LinearLayout>

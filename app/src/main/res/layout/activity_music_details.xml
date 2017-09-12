@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_color"
+    android:background="#f5282727"
     android:orientation="vertical"
     tools:context="com.example.saeed.music_app.MusicDetailsActivity">
 
@@ -14,9 +14,26 @@
         android:layout_height="wrap_content"
         android:background="@color/primary_color"
         android:titleTextColor="#faf8f8"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Artist_name_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#fcfafa"
+            android:textSize="30sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,11 +48,10 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/Attist_name_1"
+        android:id="@+id/Artist_name_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="0dp"
         android:background="@color/primary_color"
         android:gravity="center"
         android:textColor="#fcfafa"
@@ -44,7 +60,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
         android:background="@drawable/equlayzer" />
 
 

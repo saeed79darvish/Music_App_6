@@ -4,10 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-
 import android.widget.TextView;
-
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
@@ -19,6 +18,7 @@ import java.math.BigDecimal;
 
 public class MainActivity extends AppCompatActivity {
     TextView m_response;
+    Toolbar toolbar;
 
     PayPalConfiguration m_configuration;
     String m_paypalClientId="AYs4QO-hT-vBb0aD445j6Z2YJzBTFzfm-VSXeAx-DzV0YJK3oMEO3rZv1h6W5vqktF2Ub6rN8-Yui5VW";
@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
         m_response= (TextView) findViewById(R.id.response);
 
         m_configuration =new PayPalConfiguration().environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void payment(View view){
-        PayPalPayment payment=new PayPalPayment(new BigDecimal(10),"USD"," Payment with PayPal",
+        PayPalPayment payment=new PayPalPayment(new BigDecimal(10),"USD","Payment for Add new songs",
                 PayPalPayment.PAYMENT_INTENT_SALE);
 
         Intent intent=new Intent(MainActivity.this,PaymentActivity.class);

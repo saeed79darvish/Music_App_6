@@ -2,23 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:id="@+id/PlayList1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#222222"
     android:drawSelectorOnTop="true"
+    android:orientation="vertical"
     tools:context="com.example.saeed.music_app.PlayListActivity">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-      app:titleTextColor="#fcfbfb"
-        android:background="@color/primary_color" />
-    <ListView
+        android:background="@color/primary_color"
+        app:titleTextColor="#fcfbfb" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/PlayList">
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/main_activity_playlist"
+            style="@style/CategoryStyle"
+            android:background="@color/category_main_activity"
+            android:text="@string/category_main" />
+
+        <TextView
+            android:id="@+id/Albums_playlist"
+            style="@style/CategoryStyle"
+            android:background="@color/category_album"
+            android:text="@string/category_Albums" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/category_PlayList"
+            android:textColor="#fcfafa"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/Welcom"
+            style="@style/CategoryStyle_welcom"
+            android:layout_marginTop="10dp"
+            android:background="@color/category_welcom"
+            android:text="@string/category_playlist_details" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/PlayList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
     </ListView>
+
 
 </LinearLayout>

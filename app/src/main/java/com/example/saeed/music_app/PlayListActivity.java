@@ -10,9 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 import java.util.ArrayList;
+
 
 public class PlayListActivity extends AppCompatActivity {
 
@@ -47,8 +49,9 @@ public class PlayListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_list);
+        releaseMediaPlayer();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(getResources().getString(R.string.app_name));
+        toolbar.setTitle(getResources().getString(R.string.category_PlayList));
 
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
@@ -67,25 +70,26 @@ public class PlayListActivity extends AppCompatActivity {
         words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play, R.raw.hello));
         words.add(new word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play, R.raw.hello));
         words.add(new word(R.drawable.shakira, "Shakira", R.drawable.ic_play, R.raw.shakira_waka));
-
+        releaseMediaPlayer();
         wordAdapter Adapter = new wordAdapter(PlayListActivity.this, words);
         final ListView listView = (ListView) findViewById(R.id.PlayList);
         listView.setAdapter(Adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
                 Intent intent = new Intent(PlayListActivity.this, MusicDetailsActivity.class);
                 intent.putExtra("ArtistName", listView.getItemAtPosition(position).toString());
                 startActivity(intent);
 
                 word word = words.get(position);
-                releaseMediaPlayer();
 
 
                 int result = audioManager.requestAudioFocus(mOnAudioFocusChangeListener,
                         AudioManager.STREAM_MUSIC,
                         AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
                 if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                    releaseMediaPlayer();
                     mediaPlayer = MediaPlayer.create(PlayListActivity.this, word.getAudioResourceId());
                     mediaPlayer.start();
 
@@ -93,19 +97,13 @@ public class PlayListActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-
-    }
-
-    @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         releaseMediaPlayer();
+
     }
 
     private void releaseMediaPlayer() {
@@ -116,6 +114,26 @@ public class PlayListActivity extends AppCompatActivity {
             audioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
 
         }
+        TextView main = (TextView) findViewById(R.id.main_activity_playlist);
+        main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainintent = new Intent(PlayListActivity.this, MainActivity.class);
+                startActivity(mainintent);
+            }
+        });
+
+        TextView albums = (TextView) findViewById(R.id.Albums_playlist);
+        albums.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent mainintent = new Intent(PlayListActivity.this, AlbumsActivity.class);
+
+                startActivity(mainintent);
+            }
+
+        });
     }
 }
 

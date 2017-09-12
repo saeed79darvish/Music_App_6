@@ -11,6 +11,7 @@ public class MusicDetailsActivity extends AppCompatActivity {
     Toolbar mtoolbar;
     ImageView artistImage;
     TextView tvArtist;
+    TextView tvArtist_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +19,14 @@ public class MusicDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_music_details);
         mtoolbar = (Toolbar) findViewById(R.id.toolbar_1);
         artistImage = (ImageView) findViewById(R.id.image_artist);
-        tvArtist = (TextView) findViewById(R.id.Attist_name_1);
+        tvArtist = (TextView) findViewById(R.id.Artist_name_1);
+        tvArtist_1 = (TextView) findViewById(R.id.Artist_name_2);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
 
             tvArtist.setText(bundle.getString("ArtistName"));
+            tvArtist_1.setText(bundle.getString("ArtistName"));
             mtoolbar.setTitle(bundle.getString("ArtistName"));
 
             if (tvArtist.getText().toString().equalsIgnoreCase("Shakira")) {
@@ -51,6 +54,5 @@ public class MusicDetailsActivity extends AppCompatActivity {
                 artistImage.setImageDrawable(getResources().getDrawable(R.drawable.luisfonsi));
             }
         }
-
     }
 }
