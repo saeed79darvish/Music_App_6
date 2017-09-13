@@ -24,6 +24,12 @@
         android:layout_marginTop="20dp"
         android:background="@color/primary_color"
         android:orientation="vertical">
+        <TextView
+            android:id="@+id/Welcom"
+            style="@style/CategoryStyle_welcome"
+            android:layout_marginTop="10dp"
+            android:background="@color/category_welcome"
+            android:text="@string/category_Now_playing" />
 
         <TextView
             android:id="@+id/Artist_name_2"

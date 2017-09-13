@@ -4,7 +4,7 @@
     android:id="@+id/List_Container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgrond_music1"
+    android:background="@drawable/brunomars"
     android:orientation="vertical"
     tools:context="com.example.saeed.music_app.MainActivity">
 
@@ -33,11 +33,7 @@
             android:textSize="30sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="2dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,10 +42,10 @@
 
             <TextView
                 android:id="@+id/Welcom"
-                style="@style/CategoryStyle_welcom"
+                style="@style/CategoryStyle_welcome"
                 android:layout_marginTop="10dp"
-                android:background="@color/category_welcom"
-                android:text="@string/category_welcom" />
+                android:background="@color/category_welcome"
+                android:text="@string/category_welcome" />
 
 
             <TextView
@@ -65,32 +61,25 @@
                 android:text="@string/category_Albums" />
 
             <TextView
-                style="@style/CategoryStyle_welcom"
+                style="@style/CategoryStyle_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="80dp"
-                android:background="@color/category_welcom"
-                android:text="@string/category_paypal" />
+                android:background="@color/category_welcome"
+                android:text="@string/category_payment_main" />
 
             <Button
-
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/paypal"
-                android:onClick="payment"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/response"
+                android:id="@+id/payment_paypal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#222"
-                android:gravity="center"
-                android:text="response"
-                android:textColor="#f9f7f7"
-                android:textSize="30sp" />
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:text="@string/app_payment"
+                android:background="@color/primary_color"
+                android:textSize="40sp" />
+
+
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
 

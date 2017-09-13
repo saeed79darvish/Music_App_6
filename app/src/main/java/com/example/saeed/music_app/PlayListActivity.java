@@ -68,7 +68,7 @@ public class PlayListActivity extends AppCompatActivity {
         words.add(new word(R.drawable.luisfonsi, "LuisFonsi", R.drawable.ic_play, R.raw.luis_fonsi));
         words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play, R.raw.hello));
         words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play, R.raw.hello));
-        words.add(new word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play, R.raw.hello));
+        words.add(new word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play, R.raw.maroon5));
         words.add(new word(R.drawable.shakira, "Shakira", R.drawable.ic_play, R.raw.shakira_waka));
         releaseMediaPlayer();
         wordAdapter Adapter = new wordAdapter(PlayListActivity.this, words);
@@ -132,7 +132,6 @@ public class PlayListActivity extends AppCompatActivity {
 
                 startActivity(mainintent);
             }
-
         });
     }
 }

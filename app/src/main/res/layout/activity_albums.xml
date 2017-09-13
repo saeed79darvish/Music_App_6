@@ -54,10 +54,9 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/Welcom"
-            style="@style/CategoryStyle_welcom"
+            style="@style/CategoryStyle_welcome"
             android:layout_marginTop="10dp"
-            android:background="@color/category_welcom"
+            android:background="@color/category_welcome"
             android:text="@string/category_albums_details" />
     </LinearLayout>
 

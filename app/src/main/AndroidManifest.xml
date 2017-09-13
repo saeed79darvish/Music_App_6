@@ -35,7 +35,8 @@
         <activity
             android:name=".PlayListActivity"
             android:label="@string/category_PlayList" />
-        <activity android:name=".MusicDetailsActivity"></activity>
+        <activity android:name=".MusicDetailsActivity" />
+        <activity android:name=".paymentActivity"></activity>
     </application>
 
 </manifest>

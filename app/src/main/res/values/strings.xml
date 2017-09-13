@@ -1,14 +1,25 @@
 <resources>
 
     <string name="app_name">Music_App</string>
+
+    <string name="app_payment">Payment</string>
+
     <string name="category_PlayList">PlayList</string>
+
     <string name="category_main">Main</string>
 
-    <string name="category_welcom">Welcom to Music_App this App is a best place for enjoing to music, my name is Saeed Darvish and I disined this app ,so Welcom to my music app!</string>
+    <string name="category_welcome">Welcome to Music_App this App is a best place for enjoing to music, my name is Saeed Darvish and I disined this app ,so Welcom to my music app!</string>
+
     <string name="category_playlist_details">In this screen.the user can View the song that is currently being played</string>
     <string name="category_albums_details">In this screen.the user can View the Album</string>
-    <string name="category_paypal">With 10$ you can add new songs to your App!</string>
 
+    <string name="category_Now_playing">In this screen includes the image and name of singer being played</string>
+
+    <string name="category_payment">In this screen you can add new songs to your app with pay 10 $</string>
+
+    <string name="category_payment_main">With Payment Button you can add new songs to your app! </string>
+
+    <string name="category_payment_1">1- Please push payment button</string>
 
     <string name="category_Albums">Albums</string>
 

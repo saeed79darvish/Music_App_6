@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.saeed.music_app.paymentActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:titleTextColor="#faf8f8"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/primary_color"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/main_activity_playlist"
+            style="@style/CategoryStyle"
+            android:background="@color/category_main_activity"
+            android:text="@string/category_main" />
+            <TextView
+                android:id="@+id/PlayList_payment"
+                style="@style/CategoryStyle"
+                android:background="@color/category_playlist"
+                android:onClick="playlist"
+                android:text="@string/category_PlayList" />
+            <TextView
+                android:id="@+id/Albums_payment"
+                style="@style/CategoryStyle"
+                android:background="@color/category_album"
+                android:text="@string/category_Albums" />
+
+
+    </LinearLayout>
+
+        <TextView
+            style="@style/CategoryStyle_welcome"
+            android:layout_marginTop="10dp"
+            android:background="@color/category_welcome"
+            android:text="@string/category_payment" />
+        <TextView
+            style="@style/CategoryStyle_welcome"
+            android:layout_marginTop="10dp"
+            android:background="@color/category_welcome"
+            android:text="@string/category_payment_1" />
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:text="payment"
+        android:textSize="35sp"/>
+
+</LinearLayout>
