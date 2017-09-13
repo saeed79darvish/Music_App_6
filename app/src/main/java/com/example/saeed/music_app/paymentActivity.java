@@ -26,7 +26,7 @@ public class paymentActivity extends AppCompatActivity {
                 startActivity(playlistintent);
             }
         });
-        TextView playlist = (TextView) findViewById(R.id.PlayList_payment);
+        TextView playlist = (TextView) findViewById(R.id.playList_payment);
         playlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +35,7 @@ public class paymentActivity extends AppCompatActivity {
             }
         });
 
-        TextView albums = (TextView) findViewById(R.id.Albums_payment);
+        TextView albums = (TextView) findViewById(R.id.albums_payment);
         albums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

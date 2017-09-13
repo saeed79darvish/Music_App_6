@@ -16,11 +16,7 @@ public class wordAdapter extends ArrayAdapter<word> {
 
         super(context, 0, words);
     }
-
     private static final String LOG_TAG = com.example.saeed.music_app.wordAdapter.class.getSimpleName();
-
-
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

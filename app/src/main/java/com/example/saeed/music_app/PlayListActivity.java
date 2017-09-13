@@ -72,7 +72,7 @@ public class PlayListActivity extends AppCompatActivity {
         words.add(new word(R.drawable.shakira, "Shakira", R.drawable.ic_play, R.raw.shakira_waka));
         releaseMediaPlayer();
         wordAdapter Adapter = new wordAdapter(PlayListActivity.this, words);
-        final ListView listView = (ListView) findViewById(R.id.PlayList);
+        final ListView listView = (ListView) findViewById(R.id.Playlist);
         listView.setAdapter(Adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -123,7 +123,7 @@ public class PlayListActivity extends AppCompatActivity {
             }
         });
 
-        TextView albums = (TextView) findViewById(R.id.Albums_playlist);
+        TextView albums = (TextView) findViewById(R.id.albums_playlist);
         albums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

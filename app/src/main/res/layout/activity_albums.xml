@@ -20,17 +20,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/main_activity_Albums"
+            android:id="@+id/main_activity_albums"
             style="@style/CategoryStyle"
             android:background="@color/category_main_activity"
-            android:onClick="main"
             android:text="@string/category_main" />
 
         <TextView
-            android:id="@+id/PlayList_Albums"
+            android:id="@+id/playList_albums"
             style="@style/CategoryStyle"
             android:background="@color/category_playlist"
-            android:onClick="playlist"
             android:text="@string/category_PlayList" />
 
 
@@ -61,7 +59,7 @@
     </LinearLayout>
 
     <GridView
-        android:id="@+id/Albums_Activity"
+        android:id="@+id/albums_activity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="2"

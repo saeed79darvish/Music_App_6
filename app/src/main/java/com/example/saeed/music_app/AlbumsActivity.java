@@ -45,11 +45,11 @@ public class AlbumsActivity extends AppCompatActivity {
 
         wordAdapter_albums Adapter = new wordAdapter_albums(this, words_albums);
 
-        GridView gridView = (GridView) findViewById(R.id.Albums_Activity);
+        GridView gridView = (GridView) findViewById(R.id.albums_activity);
 
         gridView.setAdapter(Adapter);
 
-        final TextView main = (TextView) findViewById(R.id.main_activity_Albums);
+        final TextView main = (TextView) findViewById(R.id.main_activity_albums);
         main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +57,7 @@ public class AlbumsActivity extends AppCompatActivity {
                 startActivity(mainintent);
             }
         });
-        TextView playlist = (TextView) findViewById(R.id.PlayList_Albums);
+        TextView playlist = (TextView) findViewById(R.id.playList_albums);
         playlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

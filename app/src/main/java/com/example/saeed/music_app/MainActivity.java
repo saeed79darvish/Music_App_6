@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.app_name));
 
 
-        final TextView playlist = (TextView) findViewById(R.id.PlayList);
+        TextView playlist = (TextView) findViewById(R.id.play_list_btn);
         playlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,16 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(playlistintent);
             }
         });
-
-
-        TextView albums = (TextView) findViewById(R.id.Albums);
+        TextView albums = (TextView) findViewById(R.id.albums_btn);
         albums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent albumsintent = new Intent(MainActivity.this, AlbumsActivity.class);
-                startActivity(albumsintent);
+
+                Intent mainintent = new Intent(MainActivity.this, AlbumsActivity.class);
+                startActivity(mainintent);
             }
         });
+
         Button payment = (Button) findViewById(R.id.payment_paypal);
         payment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
     }
 
