@@ -82,11 +82,7 @@
         android:id="@+id/artist_name_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/primary_color"
-        android:gravity="center"
-        android:textColor="#fcfafa"
-        android:textSize="50sp" />
+       style="@style/Details_Artists_Name"/>
 
     <TextView
         android:layout_width="match_parent"

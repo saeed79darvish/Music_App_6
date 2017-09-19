@@ -45,4 +45,12 @@
         <item name="android:textColor">@color/category_welcome</item>
         <item name="android:textSize">30sp</item>
     </style>
+    <style name="Details_Artists_Name">
+        <item name="android:textSize">50sp</item>
+        <item name="android:background">@color/primary_color</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/category_welcome</item>
+
+    </style>
 </resources>
