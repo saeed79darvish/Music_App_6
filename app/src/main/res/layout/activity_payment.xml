@@ -48,7 +48,6 @@
                 android:background="@color/category_album"
                 android:text="@string/category_Albums" />
 
-
         </LinearLayout>
 
         <TextView
@@ -65,11 +64,19 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/addtocart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:background="@color/primary_color"
-        android:text="payment"
+        android:onClick="pay"
+        android:text="Add to cart"
         android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
 
 </LinearLayout>

@@ -44,7 +44,6 @@
             android:background="@color/category_welcome"
             android:text="@string/category_welcome" />
 
-
         <TextView
             android:id="@+id/play_list_btn"
             style="@style/CategoryStyle"
@@ -57,14 +56,6 @@
             android:background="@color/category_album"
             android:text="@string/category_Albums" />
 
-        <TextView
-            style="@style/CategoryStyle_welcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:background="@color/category_welcome"
-            android:text="@string/category_payment_main" />
-
         <Button
             android:id="@+id/payment_paypal"
             android:layout_width="match_parent"
@@ -73,8 +64,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/primary_color"
             android:text="@string/app_payment"
-            android:textSize="40sp" />
-
+            android:textSize="20sp" />
 
     </LinearLayout>
 </LinearLayout>

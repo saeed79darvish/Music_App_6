@@ -2,13 +2,17 @@
 
     <string name="app_name">Music_App</string>
 
-    <string name="app_payment">Payment</string>
+    <string name="app_payment">Add new songs</string>
+
+    <string name="app_nowplaying">Now Playing</string>
 
     <string name="category_PlayList">PlayList</string>
 
     <string name="category_main">Main</string>
 
-    <string name="category_welcome">Welcome to Music_App this App is a best place for enjoing to music, my name is Saeed Darvish and I disined this app ,so Welcom to my music app!</string>
+    <string name="category_welcome">Welcome to Music_App!
+My name is Saeed Darvish and I designed this app. This app is a perfect place for enjoying your type of music.
+!</string>
 
     <string name="category_playlist_details">In this screen.the user can View the song that is currently being played</string>
     <string name="category_albums_details">In this screen.the user can View the Album</string>
@@ -19,7 +23,7 @@
 
     <string name="category_payment_main">With Payment Button you can add new songs to your app! </string>
 
-    <string name="category_payment_1">1- Please push payment button</string>
+    <string name="category_payment_1">1- Please push Add to Cart button</string>
 
     <string name="category_Albums">Albums</string>
 
