@@ -39,21 +39,21 @@ public class PlayListActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.category_PlayList));
 
-        final ArrayList<word> words = new ArrayList<word>();
-        words.add(new word(R.drawable.adele, "Adele", R.drawable.ic_play));
-        words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play));
-        words.add(new word(R.drawable.bradpaisley, "BradPaisley", R.drawable.ic_play));
-        words.add(new word(R.drawable.brunomars, "BrunoMars", R.drawable.ic_play));
-        words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play));
-        words.add(new word(R.drawable.justinbeiber, "JustinBeiber", R.drawable.ic_play));
-        words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play));
-        words.add(new word(R.drawable.luisfonsi, "LuisFonsi", R.drawable.ic_play));
-        words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play));
-        words.add(new word(R.drawable.adele, "adele", R.drawable.ic_play));
-        words.add(new word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play));
-        words.add(new word(R.drawable.shakira, "Shakira", R.drawable.ic_play));
+        final ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word(R.drawable.adele, "Adele", R.drawable.ic_play));
+        words.add(new Word(R.drawable.adele, "adele", R.drawable.ic_play));
+        words.add(new Word(R.drawable.bradpaisley, "BradPaisley", R.drawable.ic_play));
+        words.add(new Word(R.drawable.brunomars, "BrunoMars", R.drawable.ic_play));
+        words.add(new Word(R.drawable.adele, "adele", R.drawable.ic_play));
+        words.add(new Word(R.drawable.justinbeiber, "JustinBeiber", R.drawable.ic_play));
+        words.add(new Word(R.drawable.adele, "adele", R.drawable.ic_play));
+        words.add(new Word(R.drawable.luisfonsi, "LuisFonsi", R.drawable.ic_play));
+        words.add(new Word(R.drawable.adele, "adele", R.drawable.ic_play));
+        words.add(new Word(R.drawable.adele, "adele", R.drawable.ic_play));
+        words.add(new Word(R.drawable.maroon5, "Maroon5", R.drawable.ic_play));
+        words.add(new Word(R.drawable.shakira, "Shakira", R.drawable.ic_play));
 
-        wordAdapter Adapter = new wordAdapter(PlayListActivity.this, words);
+        WordAdapter Adapter = new WordAdapter(PlayListActivity.this, words);
         final ListView listView = (ListView) findViewById(R.id.Playlist);
         listView.setAdapter(Adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -63,7 +63,7 @@ public class PlayListActivity extends AppCompatActivity {
                 Intent intent = new Intent(PlayListActivity.this, MusicDetailsActivity.class);
                 intent.putExtra("ArtistName", listView.getItemAtPosition(position).toString());
                 startActivity(intent);
-                word word = words.get(position);
+                Word word = words.get(position);
             }
         });
     }

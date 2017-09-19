@@ -37,19 +37,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="10dp"
-        android:background="@color/primary_color"
-        android:orientation="vertical">
+        style="@style/Albums_LinearLayout_3" >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
             android:text="@string/category_Albums"
-            android:textColor="#fcfafa"
-            android:textSize="30sp" />
+            style="@style/Albums_Text_1"
+             />
 
         <TextView
             style="@style/CategoryStyle_welcome"

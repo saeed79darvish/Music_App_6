@@ -40,28 +40,28 @@ public class AlbumsActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_album);
         toolbar.setTitle(getResources().getString(R.string.category_Albums));
-        ArrayList<wordalbum> words_albums = new ArrayList<wordalbum>();
+        ArrayList<WordAlbum> words_albums = new ArrayList<WordAlbum>();
 
-        words_albums.add(new wordalbum(R.drawable.adele, "Adele"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.bradpaisley, "BradPaisly"));
-        words_albums.add(new wordalbum(R.drawable.brunomars, "Brunomars"));
-        words_albums.add(new wordalbum(R.drawable.adele, "Adele"));
-        words_albums.add(new wordalbum(R.drawable.justinbeiber, "JustinBeiber"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.luisfonsi, "LuisFonsi"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.maroon5, "Maroon5"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.shakira, "Shakira"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.adele, "adele"));
-        words_albums.add(new wordalbum(R.drawable.maroon5, "Maroon5"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "Adele"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.bradpaisley, "BradPaisly"));
+        words_albums.add(new WordAlbum(R.drawable.brunomars, "Brunomars"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "Adele"));
+        words_albums.add(new WordAlbum(R.drawable.justinbeiber, "JustinBeiber"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.luisfonsi, "LuisFonsi"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.maroon5, "Maroon5"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.shakira, "Shakira"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.adele, "adele"));
+        words_albums.add(new WordAlbum(R.drawable.maroon5, "Maroon5"));
 
-        wordAdapteralbums Adapter = new wordAdapteralbums(this, words_albums);
+        WordAdapterAlbums Adapter = new WordAdapterAlbums(this, words_albums);
         GridView gridView = (GridView) findViewById(R.id.albums_activity);
         gridView.setAdapter(Adapter);
     }

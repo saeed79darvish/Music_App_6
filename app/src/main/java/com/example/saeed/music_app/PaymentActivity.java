@@ -11,17 +11,16 @@ import android.widget.TextView;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
-import com.paypal.android.sdk.payments.PaymentActivity;
 import com.paypal.android.sdk.payments.PaymentConfirmation;
 
 import java.math.BigDecimal;
 
-public class paymentActivity extends AppCompatActivity {
+public class PaymentActivity extends AppCompatActivity {
     Toolbar toolbar;
     TextView m_response;
     PayPalConfiguration m_Configuration;
 
-    String m_paypalClientId="AVvy-SwqRxu9mbM1XAZaNmVapR7Ipsx7cCwbcrD3Sx6cViWucWk420x935PDLt-MitgVk5yHh4bdFEeJ";
+    String m_paypalClientId = "AVvy-SwqRxu9mbM1XAZaNmVapR7Ipsx7cCwbcrD3Sx6cViWucWk420x935PDLt-MitgVk5yHh4bdFEeJ";
     Intent m_service;
     int m_paypalRequestCode = 999;
 
@@ -39,7 +38,7 @@ public class paymentActivity extends AppCompatActivity {
         main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent playlistintent = new Intent(paymentActivity.this, MainActivity.class);
+                Intent playlistintent = new Intent(PaymentActivity.this, MainActivity.class);
                 startActivity(playlistintent);
             }
         });
@@ -47,7 +46,7 @@ public class paymentActivity extends AppCompatActivity {
         playlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent playintent = new Intent(paymentActivity.this, PlayListActivity.class);
+                Intent playintent = new Intent(PaymentActivity.this, PlayListActivity.class);
                 startActivity(playintent);
             }
         });
@@ -57,7 +56,7 @@ public class paymentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent albumintent = new Intent(paymentActivity.this, AlbumsActivity.class);
+                Intent albumintent = new Intent(PaymentActivity.this, AlbumsActivity.class);
 
                 startActivity(albumintent);
             }
@@ -72,26 +71,26 @@ public class paymentActivity extends AppCompatActivity {
         startService(m_service);
     }
 
-    void pay(View view) {
-        PayPalPayment payment =new PayPalPayment(new BigDecimal(10),"USD","TestPayment",PayPalPayment.PAYMENT_INTENT_SALE);
-        Intent intent= new Intent(this,PaymentActivity.class);
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,m_Configuration);
-        intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payment);
-        startActivityForResult(intent,m_paypalRequestCode);
+    public void pay(View view) {
+        PayPalPayment payment = new PayPalPayment(new BigDecimal(10), "USD", "TestPayment", PayPalPayment.PAYMENT_INTENT_SALE);
+        Intent intent = new Intent(this, com.paypal.android.sdk.payments.PaymentActivity.class);
+        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, m_Configuration);
+        intent.putExtra(com.paypal.android.sdk.payments.PaymentActivity.EXTRA_PAYMENT, payment);
+        startActivityForResult(intent, m_paypalRequestCode);
     }
-    protected void onActivityResult(int requestCode,int resultCode,Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if(requestCode==m_paypalRequestCode){
-            if(resultCode== Activity.RESULT_OK){
-                PaymentConfirmation confirmation=data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-                if(confirmation!=null){
-                    String state= confirmation.getProofOfPayment().getState();
-                    if(state.equals("approved"))
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == m_paypalRequestCode) {
+            if (resultCode == Activity.RESULT_OK) {
+                PaymentConfirmation confirmation = data.getParcelableExtra(com.paypal.android.sdk.payments.PaymentActivity.EXTRA_RESULT_CONFIRMATION);
+                if (confirmation != null) {
+                    String state = confirmation.getProofOfPayment().getState();
+                    if (state.equals("approved"))
                         m_response.setText("payment approved");
                     else
                         m_response.setText("error");
-                }
-                else
+                } else
                     m_response.setText("Confirmation is null");
             }
         }

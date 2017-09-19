@@ -60,11 +60,9 @@
             android:id="@+id/payment_paypal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@color/primary_color"
             android:text="@string/app_payment"
-            android:textSize="20sp" />
+            style="@style/Main_AddNewSong_Button"
+             />
 
     </LinearLayout>
 </LinearLayout>

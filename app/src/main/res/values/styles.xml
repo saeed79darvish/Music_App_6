@@ -1,30 +1,48 @@
 <resources>
 
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorPrimaryDark">@color/primary_dark_color</item>
-    </style>
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/primary_color</item>
+    <item name="colorPrimaryDark">@color/primary_dark_color</item>
+</style>
 
-    <style name="CategoryStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">2</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:textAppearanceMedium</item>
-    </style>
+<style name="CategoryStyle">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">2</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textAppearance">?android:textAppearanceMedium</item>
+</style>
 
-    <style name="CategoryStyle_welcome">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">2</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:textColor">@color/primary_color</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+<style name="CategoryStyle_welcome">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">2</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:textColor">@color/primary_color</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textAppearance">?android:textAppearanceMedium</item>
+</style>
+    <style name="Main_AddNewSong_Button">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/primary_color</item>
+    </style>
+    <style name="Albums_LinearLayout_3">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/primary_color</item>
+        <item name="android:orientation">vertical</item>
+
+    </style>
+    <style name="Albums_Text_1">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/category_welcome</item>
+        <item name="android:textSize">30sp</item>
     </style>
 </resources>

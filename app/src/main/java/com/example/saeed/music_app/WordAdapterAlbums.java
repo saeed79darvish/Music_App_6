@@ -11,12 +11,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class wordAdapter extends ArrayAdapter<word> {
-    public wordAdapter(Activity context, ArrayList<word> words) {
-        super(context, 0, words);
+public class WordAdapterAlbums extends ArrayAdapter<WordAlbum> {
+    public WordAdapterAlbums(Activity context, ArrayList<WordAlbum> words_album) {
+
+        super(context, 0, words_album);
     }
 
-    private static final String LOG_TAG = com.example.saeed.music_app.wordAdapter.class.getSimpleName();
+    private static final String LOG_TAG = WordAdapterAlbums.class.getSimpleName();
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -24,17 +25,14 @@ public class wordAdapter extends ArrayAdapter<word> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+                    R.layout.gride_item_, parent, false);
         }
-        word currentword = getItem(position);
+        WordAlbum currentword = getItem(position);
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
         iconView.setImageResource(currentword.getImageResourceId());
 
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.version_name);
         nameTextView.setText(currentword.getVersionName());
-
-        ImageView iconView1 = (ImageView) listItemView.findViewById(R.id.list_item_1);
-        iconView1.setImageResource(currentword.getImageResourceId_1());
         return listItemView;
     }
 }
