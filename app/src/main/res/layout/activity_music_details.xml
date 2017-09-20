@@ -54,7 +54,7 @@
             style="@style/CategoryStyle_welcome"
             android:layout_marginTop="10dp"
             android:background="@color/category_welcome"
-            android:text="@string/category_Now_playing" />
+            android:text="@string/Now_playing_Mediaplayer" />
 
         <TextView
             android:id="@+id/artist_name_2"

@@ -50,28 +50,52 @@
 
         </LinearLayout>
 
-        <TextView
-            style="@style/CategoryStyle_welcome"
-            android:layout_marginTop="10dp"
-            android:background="@color/category_welcome"
-            android:text="@string/category_payment" />
+
 
         <TextView
             style="@style/CategoryStyle_welcome"
             android:layout_marginTop="10dp"
             android:background="@color/category_welcome"
-            android:text="@string/category_payment_1" />
+            android:text="@string/category_paypal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="3"
+            android:background="@drawable/bradpaisley" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="3"
+            android:background="@drawable/shakira"
+
+            />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="3"
+            android:background="@drawable/brunomars" />
+
     </LinearLayout>
 
     <Button
         android:id="@+id/addtocart"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:background="@color/primary_color"
-        android:onClick="pay"
-        android:text="Add to cart"
-        android:textSize="35sp" />
+        android:background="@drawable/paypal"
+        android:onClick="pay" />
 
     <TextView
         android:id="@+id/response"

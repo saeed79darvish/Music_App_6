@@ -11,19 +11,33 @@
     <string name="category_main">Main</string>
 
     <string name="category_welcome">Welcome to Music_App!
-My name is Saeed Darvish and I designed this app. This app is a perfect place for enjoying your type of music.
-!</string>
+        My name is Saeed Darvish and I designed this app. This app is
+        a perfect place for enjoying your type of music!
+    </string>
 
-    <string name="category_playlist_details">In this screen.the user can View the song that is currently being played</string>
+    <string name="category_playlist_details">In this screen.the user can View the song that is currently being
+
+        played</string>
+
     <string name="category_albums_details">In this screen.the user can View the Album</string>
 
-    <string name="category_Now_playing">In this screen includes the image and name of singer being played</string>
+    <string name="Now_playing_Mediaplayer">In this screen we call MediaPlayer API. MediaPlayer API is used to play music. Any click on the listview  in PlayList screen will call MediaPlayer API to play the desired music
+
+    </string>
+
+
+
+    <string name="category_paypal">DESCRIPTION: in this Screen you will be able to buy music via PayPal API. PayPal API will be used to connect to paypal account.
+         After choosing Artists and Album you will confirm PAYPAL button
+         When push the paypal button and you will go to the PAYPAL screen,
+         After going to the PAYPAL screen,if you have a PAYPAL account,Enter UserName,Password and after your paying the music added to the App</string>
+
 
     <string name="category_payment">In this screen you can add new songs to your app with pay 10 $</string>
 
     <string name="category_payment_main">With Payment Button you can add new songs to your app! </string>
 
-    <string name="category_payment_1">1- Please push Add to Cart button</string>
+
 
     <string name="category_Albums">Albums</string>
 

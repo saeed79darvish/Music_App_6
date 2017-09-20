@@ -2,8 +2,8 @@ package com.example.saeed.music_app;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
@@ -19,6 +19,7 @@ public class PaymentActivity extends AppCompatActivity {
     Toolbar toolbar;
     TextView m_response;
     PayPalConfiguration m_Configuration;
+
 
     String m_paypalClientId = "AVvy-SwqRxu9mbM1XAZaNmVapR7Ipsx7cCwbcrD3Sx6cViWucWk420x935PDLt-MitgVk5yHh4bdFEeJ";
     Intent m_service;
